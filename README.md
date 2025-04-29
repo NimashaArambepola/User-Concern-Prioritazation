@@ -3,10 +3,10 @@ User Concern Prioritazation
 
 This dashboard analyzes mobile app reviews to identify, interpret, and prioritize user concerns through an integrated and interpretable pipeline. It leverages topic modeling to detect recurring themes across reviews, sentiment analysis to focus on negative and neutral feedback, and a multi-metric scoring framework to assign priority to issues. The prioritization mechanism combines four key metrics:
 
-- Entropy (measuring topic distribution variability),
-- Topic Prevalence (how frequently a topic appears across reviews),
-- Thumbs Up count (user endorsement of the review), and
-- Sentiment polarity (intensity of negativity).
+- Entropy (measuring topic distribution variability)
+- Topic Prevalence (how frequently a topic appears across reviews)
+- Thumbs Up count (user endorsement of the review)
+- Sentiment polarity (intensity of negativity)
 
 These metrics work together to produce a balanced and data-driven priority score for each topic. The dashboard also incorporates LLM-based topic interpretation using Mistral AI, helping users understand the nature of each concern and relate it to broader user experience (UX) factors.
 
