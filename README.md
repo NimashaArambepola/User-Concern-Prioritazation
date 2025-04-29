@@ -1,16 +1,30 @@
 # User-Concern-Prioritazation
 User Concern Prioritazation
 
-This dashboard analyzes app reviews to identify and prioritize user concerns and issues. It uses topic modeling, sentiment analysis, and natural language processing to extract meaningful insights from user reviews.hj
+This dashboard analyzes mobile app reviews to identify, interpret, and prioritize user concerns through an integrated and interpretable pipeline. It leverages topic modeling to detect recurring themes across reviews, sentiment analysis to focus on negative and neutral feedback, and a multi-metric scoring framework to assign priority to issues. The prioritization mechanism combines four key metrics:
+
+- Entropy (measuring topic distribution variability),
+- Topic Prevalence (how frequently a topic appears across reviews),
+- Thumbs Up count (user endorsement of the review), and
+- Sentiment polarity (intensity of negativity).
+
+These metrics work together to produce a balanced and data-driven priority score for each topic. The dashboard also incorporates LLM-based topic interpretation using Mistral AI, helping users understand the nature of each concern and relate it to broader user experience (UX) factors.
+
+A unique feature of the tool is its ability to isolate and prioritize data demand-related concerns, a relatively underexplored but critical aspect in mobile app usage. Developers can choose to analyze general user concerns or specifically filter and rank reviews that reflect data usage complaints or bandwidth-related issues. This dual capability ensures the tool serves both general and specialized diagnostic needs, enabling more targeted and informed decision-making in app development and maintenance.
 
 ## Features
 
-- Upload and analyze Excel files containing app reviews
-- Automatic sentiment analysis to identify negative and neutral reviews
-- Topic modeling to group similar issues and concerns
+- Upload app review datasets (Excel format) with required columns: review text, version, and thumbs up count
+- Automatic sentiment analysis (using VADER) to identify and filter negative and neutral reviews
+- Topic modeling (LDA with bi-grams) to group similar concerns across reviews
+- Priority scoring based on a multi-metric approach using:
+- LLM-based topic interpretation using Mistral AI, with mapping to user experience (UX) factors
+- Data demand-specific filtering: isolate and prioritize only data demand-related issues if required
 - Interactive visualization of topic analysis metrics
-- Topic interpretation using Mistral AI
-- Export functionality for analysis results
+- Two-tab results display:
+   Bar chart of prioritized user concerns
+   Ranked list with interpreted topics and their priority scores
+- Export results (CSV) for further analysis or reporting
 
 ## Setup
 
